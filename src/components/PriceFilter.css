@@ -1,0 +1,61 @@
+.filter-container {
+    position: absolute;
+    top: 10px;
+    right: 150px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 2px solid #007BFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.price-label {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Styling for the slider rail (track) */
+.rc-slider-rail {
+    background-color: #a7c8d2b6;
+    height: 5px;
+    border-radius: 2.5px;
+}
+
+/* Styling for the slider track (filled portion) */
+.rc-slider-track {
+    background-color: #007BFF;
+    height: 5px;
+    border-radius: 2.5px;
+}
+
+/* Styling for the slider handle */
+.rc-slider-handle {
+    border-color: #007BFF;
+    background-color: #007BFF;
+    width: 14px;
+    height: 14px;
+    margin-top: -5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+        top: 10px;
+        right: 10px;
+        padding: 8px 12px;
+        border-radius: 15px;
+    }
+
+    .rc-slider {
+        width: 100%;
+        margin-top: 8px;
+    }
+}

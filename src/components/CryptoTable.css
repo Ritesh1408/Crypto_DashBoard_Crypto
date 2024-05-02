@@ -1,0 +1,105 @@
+/* Styles for the search input */
+.search-input {
+    width: 100%;
+    max-width: 300px;
+    padding: 20px 20px;
+    margin: 20px auto;
+    border: 2px solid #007BFF;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    position: absolute;
+    top: 200px; 
+    left: calc(30% - 150px);
+    z-index: 1;
+}
+
+.search-input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.search-input::placeholder {
+    color: #ccc;
+}
+
+/* Basic styling for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 300px;
+    font-size: 0.9rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for table headers */
+th {
+    background-color: #007BFF;
+    color: rgb(16, 15, 15);
+    font-weight: bold;
+    padding: 12px 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+th:hover {
+    background-color: #308bec;
+}
+
+/* Sort indicators positioned in the header */
+th span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Styling for table cells */
+td {
+    padding: 10px 15px;
+    border-top: 1px solid #dee2e6;
+    text-align: left;
+}
+
+/* Hover effect for table rows */
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Responsive table layout */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+        margin-bottom: 5px;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+        font-weight: bold;
+    }
+}
